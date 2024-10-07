@@ -1,0 +1,149 @@
+
+*{margin: 0; padding: 0;}
+
+body{
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+background: #F8F0E3;
+}
+
+.menuNav{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+list-style:none;
+border:2px solid #c0c0c0;
+float:left;
+border-radius: 8px;
+}
+
+.menu li{
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+}
+
+.menu li a{
+    color:#a95534;
+    background: #fffa3c; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+    font-size: 15px;
+}
+
+.menu li a:hover{
+background:#a95534 ;
+color:#fffa3c;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
+}
+
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#fff;
+    display:none;
+    }
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+    }
+
+.header {
+    display: inline;
+}
+
+.logotipo {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logotipo img {
+    vertical-align: middle;
+    max-width: 30%;
+}
+
+.contato{
+    margin-left: 76%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu ul{
+    list-style: none;    
+    justify-content: space-between;
+}
+
+.imgContent{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.imgContent img{
+    width: 90%;
+}
+
+.imgContent img:hover {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+
+.imgContent span {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font: 12px;
+    color: #a95534;
+}
+
+.confeiteira{
+    justify-content: right;
+    display: flex;
+}
+
+.confeiteira p {
+    margin-top: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    width: 50%;
+    font-size: 15px;
+    color: #a95534;
+}
+
+.confeiteira img {
+    max-width: 30%;
+    margin-top: 50px;
+    margin-right: 100px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 5px #a95534;
+}
+
+footer{
+    position: fixed;   
+    margin: 0px 0px 0px calc((100% - 500px)* 0.5); 
+    text-align: center;
+    color: #a95534;
+    font-size: 15px;
+    top: 97%;
+}
