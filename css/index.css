@@ -1,20 +1,37 @@
 
 *{margin: 0; padding: 0;}
 
+
 body{
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
-background: #F8F0E3;
+    font-family: "Bellota";
+    font-weight: 500;
+    font-style: normal;
+    background: #F8F0E3;
+    background-image: url(../images/abelhas.png);
+    background-blend-mode: color-burn;
+    color: black;
+    max-width: auto;
+    height: 400px;
 }
+
 
 .menuNav{
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    margin-top: -224px;
+    margin-right: 60px;
+}
+
+.fundoMenu img {
+    max-width: 35%;
+    display: flex;
+    margin-top: -240px;
+    margin-left: 990px;
 }
 
 .menu{
 list-style:none;
-border:2px solid #c0c0c0;
+/* border:2px solid #c0c0c0; */
 float:left;
 border-radius: 8px;
 }
@@ -22,31 +39,28 @@ border-radius: 8px;
 .menu li{
     position:relative;
     float:left;
-    border-right:1px solid #c0c0c0;
+    /* border-right:1px solid #c0c0c0; */
 }
 
 .menu li a{
-    color:#a95534;
-    background: #fffa3c; 
+    color:black;
     text-decoration:none; 
     padding:5px 10px; 
     display:block;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .menu li a:hover{
-background:#a95534 ;
-color:#fffa3c;
--moz-box-shadow:0 3px 10px 0 #CCC;
--webkit-box-shadow:0 3px 10px 0 #ccc;
-text-shadow:0px 0px 5px #fff;
+background:white;
+color:black;
 }
 
 .menu li  ul{
     position:absolute;
     top:25px;
     left:0;
-    background-color:#fff;
+    /* background-color:#a95534; */
     display:none;
     }
 
@@ -63,7 +77,6 @@ text-shadow:0px 0px 5px #fff;
 }
 
 .logotipo {
-    display: flex;
     justify-content: center;
     padding: 0;
     overflow: hidden;
@@ -71,7 +84,8 @@ text-shadow:0px 0px 5px #fff;
 
 .logotipo img {
     vertical-align: middle;
-    max-width: 30%;
+    max-width: 40%;
+    margin-left: 200px;
 }
 
 .contato{
@@ -85,25 +99,29 @@ text-shadow:0px 0px 5px #fff;
     justify-content: space-between;
 }
 
-.imgContent{
-    cursor: pointer;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 10px;
+.content{
+    margin-top: 235px;
+    font-size: 30px;
+    text-align: justify;
+    max-width: 90%;
+    margin-left: 80px;
 }
 
-.imgContent img{
-    width: 90%;
+.content span {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+/* .imgContent img{
+    width: 80%;
 }
 
 .imgContent img:hover {
-    -webkit-transform:scale(1.25); /* Safari and Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* IE 9 */
-    -o-transform:scale(1.25); /* Opera */
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
      transform:scale(1.25);
 }
 
@@ -111,39 +129,92 @@ text-shadow:0px 0px 5px #fff;
     display: flex;
     text-align: center;
     justify-content: center;
-    font: 12px;
-    color: #a95534;
-}
+    font-size: 15px;
+    color: black;
+} */
 
 .confeiteira{
     justify-content: right;
     display: flex;
+    margin-bottom: 50px;
 }
 
 .confeiteira p {
-    margin-top: 50px;
     margin-right: 50px;
     display: flex;
     justify-content: space-around;
     text-align: justify;
     width: 50%;
-    font-size: 15px;
-    color: #a95534;
+    font-size: 20px;
+    color: black;
+    margin-top: 235px;
 }
 
 .confeiteira img {
-    max-width: 30%;
-    margin-top: 50px;
-    margin-right: 100px;
+    max-width: 40%;
+    margin-top: 210px;
+    margin-right: 15px;
     border-radius: 15px;
     box-shadow: 5px 10px 5px #a95534;
 }
 
 footer{
     position: fixed;   
-    margin: 0px 0px 0px calc((100% - 500px)* 0.5); 
+    margin: 0px 0px 0px calc((100% - 600px)* 0.6); 
     text-align: center;
-    color: #a95534;
-    font-size: 15px;
+    font-size: 20px;
     top: 97%;
+    font-weight: 800;
 }
+
+.menuNavConfe{
+    display: flex;
+    justify-content: end;
+    margin-top: -240px;
+    margin-right: 60px;
+    font-size: 15px;
+}
+
+.menuConfe{
+list-style:none;
+/* border:2px solid #c0c0c0; */
+float:left;
+border-radius: 8px;
+margin-right: 50px;
+}
+
+.menuConfe li{
+    position:relative;
+    float:left;
+    /* border-right:1px solid #c0c0c0; */
+}
+
+.menuConfe li a{
+    color:black;
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.menuConfe li a:hover{
+background:white;
+color:black;
+}
+
+.menuConfe li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    /* background-color:#a95534; */
+    display:none;
+    }
+
+.menuConfe li:hover ul, .menu li.over ul{display:block;}
+
+.menuConfe li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+    }
