@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* body {
+    position: relative;
+    font-family: 'Bellota', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../images/abelhas.png');
+    background-size: cover;
+    background-position: center;
+} */
+
+body {
+    font-family: "Bellota", sans-serif;
+    background: #F8F0E3;
+    background-image: url(../images/abelhas.png);
+    background-blend-mode: color-burn;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Ajuste a cor e opacidade conforme necessário */
+    z-index: 1; /* Coloca o overlay acima da imagem */
+}
+
+/* Restante do seu CSS */
+
+
+.container {
+    flex: 1;
+    padding: 20px; /* Adiciona um espaço ao redor do conteúdo */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logotipo img {
+    max-width: 60%; /* Aumentar proporção do logo */
+    margin-top: -40px;
+}
+
+.menuNav {
+    display: flex;
+    justify-content: flex-end; /* Alinhar à direita */
+    position: absolute; /* Permite sobreposição */
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 88px; /* Alinhar à direita */
+    flex-wrap: wrap; /* Permitir que os itens do menu se empilhem em telas pequenas */
+    z-index: 10; /* Manter o menu acima do fundo */
+}
+
+.fundoMenu {
+    position: absolute; /* Para permitir sobreposição */
+    top: 0; /* Ajuste a posição vertical conforme necessário */
+    right: 0; /* Alinhar à direita */
+    left: 0;
+    width: 100%;
+    justify-content: right;
+    display: flex;
+    z-index: 5; /* Fundo atrás do menu */
+}
+
+
+.fundoMenu img {
+    max-width: 30%; /* Ajuste para o tamanho desejado */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.menu li a:hover {
+    background: white;
+    color: black;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content section {
+    
+    display: flex; /* Permite alinhar o texto e a imagem */
+    align-items: flex-start; /* Alinha o texto ao topo da imagem */
+}
+
+.content p {
+    flex: 1; /* O texto ocupa o espaço restante */
+    margin-right: 20px; /* Espaço entre o texto e a imagem */
+    text-align: justify; /* Justifica o texto */
+    font-size: 1.2em; /* Tamanho da fonte ajustado */
+    line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
+    font-weight: bolder;
+}
+
+.confeiteira-img {
+    max-width: 40%; /* Aumenta a proporção da imagem */
+    height: auto;
+    align-self: flex-end; /* Alinha a imagem à direita do texto */
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #a95534; /* Mude para a cor do seu logo */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.anelim {
+    margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content section {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center;
+    }
+
+    .content p {
+        margin-right: 0; /* Remove a margem em telas menores */
+    }
+
+    .confeiteira-img {
+        max-width: 100%; /* A imagem ocupa toda a largura disponível */
+    }
+}

@@ -1,220 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-*{margin: 0; padding: 0;}
-
-
-body{
-    font-family: "Bellota";
-    font-weight: 500;
-    font-style: normal;
+body {
+    font-family: "Bellota", sans-serif;
     background: #F8F0E3;
     background-image: url(../images/abelhas.png);
     background-blend-mode: color-burn;
     color: black;
-    max-width: auto;
-    height: 400px;
-}
-
-
-.menuNav{
     display: flex;
-    justify-content: end;
-    margin-top: -224px;
-    margin-right: 60px;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-.fundoMenu img {
-    max-width: 35%;
-    display: flex;
-    margin-top: -240px;
-    margin-left: 990px;
-}
-
-.menu{
-list-style:none;
-/* border:2px solid #c0c0c0; */
-float:left;
-border-radius: 8px;
-}
-
-.menu li{
-    position:relative;
-    float:left;
-    /* border-right:1px solid #c0c0c0; */
-}
-
-.menu li a{
-    color:black;
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.menu li a:hover{
-background:white;
-color:black;
-}
-
-.menu li  ul{
-    position:absolute;
-    top:25px;
-    left:0;
-    /* background-color:#a95534; */
-    display:none;
-    }
-
-.menu li:hover ul, .menu li.over ul{display:block;}
-
-.menu li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:150px;
-    }
 
 .header {
-    display: inline;
-}
-
-.logotipo {
-    justify-content: center;
-    padding: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Para permitir sobreposição */
 }
 
 .logotipo img {
-    vertical-align: middle;
-    max-width: 40%;
-    margin-left: 200px;
+    max-width: 60%; /* Aumentar proporção do logo */
+    margin-top: -20px;
 }
 
-.contato{
-    margin-left: 76%;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.menu ul{
-    list-style: none;    
-    justify-content: space-between;
-}
-
-.content{
-    margin-top: 235px;
-    font-size: 30px;
-    text-align: justify;
-    max-width: 90%;
-    margin-left: 80px;
-}
-
-.content span {
+.menuNav {
     display: flex;
-    justify-content: center;
-    margin-top: 5px;
+    justify-content: flex-end; /* Alinhar à direita */
+    position: absolute; /* Permite sobreposição */
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 40px; /* Alinhar à direita */
+    flex-wrap: wrap; /* Permitir que os itens do menu se empilhem em telas pequenas */
+    z-index: 10; /* Manter o menu acima do fundo */
 }
 
-/* .imgContent img{
-    width: 80%;
-}
-
-.imgContent img:hover {
-    -webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-     transform:scale(1.25);
-}
-
-.imgContent span {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-size: 15px;
-    color: black;
-} */
-
-.confeiteira{
+.fundoMenu {
+    position: absolute; /* Para permitir sobreposição */
+    top: 0; /* Ajuste a posição vertical conforme necessário */
+    right: 0; /* Alinhar à direita */
+    left: 0;
+    width: 100%;
     justify-content: right;
     display: flex;
-    margin-bottom: 50px;
+    z-index: 5; /* Fundo atrás do menu */
 }
 
-.confeiteira p {
-    margin-right: 50px;
+.fundoMenu img {
+    max-width: 30%; /* Ajuste para o tamanho desejado */
+}
+
+.menu {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
-    text-align: justify;
-    width: 50%;
-    font-size: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
     color: black;
-    margin-top: 235px;
-}
-
-.confeiteira img {
-    max-width: 40%;
-    margin-top: 210px;
-    margin-right: 15px;
-    border-radius: 15px;
-    box-shadow: 5px 10px 5px #a95534;
-}
-
-footer{
-    position: fixed;   
-    margin: 0px 0px 0px calc((100% - 600px)* 0.6); 
-    text-align: center;
-    font-size: 20px;
-    top: 97%;
-    font-weight: 800;
-}
-
-.menuNavConfe{
-    display: flex;
-    justify-content: end;
-    margin-top: -240px;
-    margin-right: 60px;
-    font-size: 15px;
-}
-
-.menuConfe{
-list-style:none;
-/* border:2px solid #c0c0c0; */
-float:left;
-border-radius: 8px;
-margin-right: 50px;
-}
-
-.menuConfe li{
-    position:relative;
-    float:left;
-    /* border-right:1px solid #c0c0c0; */
-}
-
-.menuConfe li a{
-    color:black;
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
+    text-decoration: none;
+    padding: 5px 10px;
     font-size: 20px;
     font-weight: 900;
 }
 
-.menuConfe li a:hover{
-background:white;
-color:black;
+.menu li a:hover {
+    background: white;
+    color: black;
 }
 
-.menuConfe li  ul{
-    position:absolute;
-    top:25px;
-    left:0;
-    /* background-color:#a95534; */
-    display:none;
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.content {
+    flex: 1;
+    margin: 20px;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.imagesIni {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px; /* Espaçamento entre as imagens e o footer */
+}
+
+.imagesIni img {
+    width: calc(20% - 10px); /* Diminuir a proporção dos cards */
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 5px #a95534;
+    transition: transform 0.2s;
+}
+
+.imagesIni img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #a95534; /* Cor do footer, ajuste conforme a cor do logo */
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white; /* Cor do texto no footer */
+}
+
+@media (max-width: 768px) {
+    .menuNav {
+        flex-direction: column; /* Empilhar menu em telas menores */
+        align-items: flex-end; /* Alinhar à direita */
     }
 
-.menuConfe li:hover ul, .menu li.over ul{display:block;}
-
-.menuConfe li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:150px;
+    .menu {
+        flex-direction: column; /* Menu empilhado */
     }
+
+    .imagesIni img {
+        width: calc(50% - 20px); /* Duas imagens por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagesIni img {
+        width: calc(100% - 20px); /* Uma imagem por linha em telas muito pequenas */
+    }
+
+    .content {
+        font-size: 20px; /* Reduzir o tamanho da fonte em telas pequenas */
+    }
+}
