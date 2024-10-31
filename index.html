@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +7,72 @@
     <link rel="shortcut icon" href="favicon_transparent_32x32.png" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-
-    <script type="text/javascript" src="lib/index.js"></script>
+    
 </head>
 <body>
     <div class="overlay"></div>
     <div class="container">
-    <div class="header">
+        <div class="header">
             <div class="logotipo">
                 <img src="/logo.png" alt="Anelim Sweets">
-            </div>    
-            <div class="fundoMenu">
-                <img src="images/melderretendo.png">
             </div>
-            <nav class="menuNav">                
+            <div class="fundoMenu">
+                <img src="images/melderretendo.png" alt="Imagem de fundo do menu">
+            </div>
+            <div class="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="menuNav">
                 <ul class="menu">
-                      <li><a href="pages/confeiteira.html">A Confeiteira</a></li>
-                            <li><a href="#">O que fazemos?</a>
-                               <ul>
-                                    <li><a href="#">Aniversários</a></li>
-                                    <li><a href="#">Chá Revelação</a></li>
-                                    <li><a href="#">Baby Born</a></li>
-                                 </ul>
-                          </li>                       
-                      <li><a>Contato</a>
+                    <li><a href="pages/confeiteira.html">A Confeiteira</a></li>
+                    <li>
+                        <a href="#">O que fazemos?</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
                         <ul>
                             <li>
                                 <a target="_blank" href="https://api.whatsapp.com/send?phone=5511969936243&text=Olá, gostaria de mais informações">
-                                <b title="Whatsapp" style="color: green;" class="fa">&#xf232; Wpp</b></a>
+                                    <b title="Whatsapp" style="color: green;" class="fa">&#xf232; Wpp</b>
+                                </a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.instagram.com/anelim.sweets?igsh=MTFvbHg3dmJ5c2U5cg==">
-                                <b title="Instagram" style="color: deeppink;" class="fa">&#xf16d; Insta</b></a>
+                                    <b title="Instagram" style="color: deeppink;" class="fa">&#xf16d; Insta</b>
+                                </a>
                             </li>
                         </ul>
                     </li>
-              </ul>
+                </ul>
             </nav>
-    </div>     
-    <div class="content">
-        <section>
-            <div class="carousel">
-                <div class="imagesIni">
-                    <img id="1" src="images/pavlova.png" title="Pavlova">
-                    <img id="2" src="images/pudim.png" title="Pudim">
-                    <img id="4" src="images/bolotresleites.png" title="Bolo três leites">
-                    <img id="5" src="images/RedVelvet.png" title="RedVelvet">
-                    <img id="7" src="images/crepe.png" title="Crepe">
-                </div>               
-              </div>            
-    <footer>
-        <section class="anelim">
-        ©2024 Anelim Sweets - O mundo da confeitaria
-        </section>
-    </footer>
-</div>
+        </div>
+        
+        <div class="content" id="content">
+            <section>
+                <div class="carousel">
+                    <div class="imagesIni">
+                        <img id="1" src="images/pavlova.png" title="Pavlova">
+                        <img id="2" src="images/pudim.png" title="Pudim">
+                        <img id="4" src="images/bolotresleites.png" title="Bolo três leites">
+                        <img id="5" src="images/RedVelvet.png" title="Red Velvet">
+                        <img id="7" src="images/crepe.png" title="Crepe">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <section class="anelim">
+                ©2024 Anelim Sweets - O mundo da confeitaria
+            </section>
+        </footer>
+    </div>
+    <script src="lib/index.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+/* Estilos gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,37 +22,37 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative; /* Para permitir sobreposição */
+    position: relative;
 }
 
 .logotipo img {
-    max-width: 60%; /* Aumentar proporção do logo */
+    max-width: 60%;
     margin-top: -20px;
 }
 
 .menuNav {
     display: flex;
-    justify-content: flex-end; /* Alinhar à direita */
-    position: absolute; /* Permite sobreposição */
-    top: 20px; /* Ajuste a posição vertical conforme necessário */
-    right: 40px; /* Alinhar à direita */
-    flex-wrap: wrap; /* Permitir que os itens do menu se empilhem em telas pequenas */
-    z-index: 10; /* Manter o menu acima do fundo */
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    flex-wrap: wrap;
+    z-index: 10;
 }
 
 .fundoMenu {
-    position: absolute; /* Para permitir sobreposição */
-    top: 0; /* Ajuste a posição vertical conforme necessário */
-    right: 0; /* Alinhar à direita */
+    position: absolute;
+    top: 0;
+    right: 0;
     left: 0;
     width: 100%;
     justify-content: right;
     display: flex;
-    z-index: 5; /* Fundo atrás do menu */
+    z-index: 5;
 }
 
 .fundoMenu img {
-    max-width: 30%; /* Ajuste para o tamanho desejado */
+    max-width: 30%;
 }
 
 .menu {
@@ -97,11 +99,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 40px; /* Espaçamento entre as imagens e o footer */
+    margin-bottom: 40px;
 }
 
 .imagesIni img {
-    width: calc(20% - 10px); /* Diminuir a proporção dos cards */
+    width: calc(20% - 10px);
     margin: 10px;
     border-radius: 15px;
     box-shadow: 5px 10px 5px #a95534;
@@ -112,23 +114,79 @@ body {
     transform: scale(1.05);
 }
 
+.menuNav.active {
+    display: flex; /* Mostrar o menu quando ativo */
+    flex-direction: column; /* Empilhar os itens do menu */
+}
+
+
 footer {
-    background: #a95534; /* Cor do footer, ajuste conforme a cor do logo */
+    background: #a95534;
     text-align: center;
     padding: 20px;
     font-size: 20px;
     font-weight: 800;
-    color: white; /* Cor do texto no footer */
+    color: white;
 }
 
+/* Media Queries */
+
 @media (max-width: 768px) {
+    .logotipo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
     .menuNav {
-        flex-direction: column; /* Empilhar menu em telas menores */
-        align-items: flex-end; /* Alinhar à direita */
+        display: none; /* O menu permanece oculto em dispositivos móveis */
+        /* Estilos para o menu já definidos anteriormente */
+    }
+
+    .menuNav.active {
+        display: flex; /* Mostrar o menu quando ativo */
+        flex-direction: column; /* Empilhar os itens do menu */
+    }
+
+    .menuToggle {
+        display: flex; /* Exibir o botão de menu hambúrguer */
+        cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    }
+
+    .menuToggle {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px; /* Ajuste conforme necessário */
+        height: 25px; /* Ajuste conforme necessário */
+        margin-right: 20px; /* Ajuste conforme necessário */
+    }
+
+    .bar {
+        height: 3px; /* Espessura das barras */
+        width: 100%; /* Largura das barras */
+        background-color: black; /* Cor das barras */
+        transition: 0.3s; /* Transição suave */
     }
 
     .menu {
         flex-direction: column; /* Menu empilhado */
+        width: 100%; /* Para ocupar toda a largura */
+    }
+
+    .menu li {
+        width: 100%; /* Itens do menu ocupam a largura total */
+        text-align: right; /* Alinhar texto à direita */
+        padding: 5px;
+        right: 30px;
+        top: 80px;
+    }
+    
+    .menu li ul {
+        top: -80px;
+    }
+
+    .fundoMenu {
+        display: none; /* Ocultar fundo do menu em dispositivos móveis */
     }
 
     .imagesIni img {

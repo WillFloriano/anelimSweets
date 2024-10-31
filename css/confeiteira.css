@@ -149,22 +149,88 @@ footer {
     text-align: center;
 }
 
+.menuNav.active {
+    display: flex; /* Mostrar o menu quando ativo */
+    flex-direction: column; /* Empilhar os itens do menu */
+}
+
+
 .anelim {
     margin-top: 10px;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
-    .content section {
-        flex-direction: column; /* Muda para coluna em telas menores */
-        align-items: center;
+    
+    .logotipo img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .content p {
-        margin-right: 0; /* Remove a margem em telas menores */
+    .content section {
+        display: block;
+    }
+    
+    .fundoMenu {
+        display: none; /* Oculta o fundoMenu em dispositivos móveis */
+    }
+
+    .menuNav {
+        display: none; /* Oculta o menu em telas menores */
+    }
+
+    .menuNav.active {
+        display: flex; /* Mostrar o menu quando ativo */
+        flex-direction: column; /* Empilhar os itens do menu */
+    }
+
+    .menuToggle {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px; /* Ajuste conforme necessário */
+        height: 25px; /* Ajuste conforme necessário */
+        margin-right: 20px; /* Ajuste conforme necessário */
+        display: flex; /* Exibir o botão de menu hambúrguer */
+        cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    }
+
+    .bar {
+        height: 3px; /* Espessura das barras */
+        width: 100%; /* Largura das barras */
+        background-color: black; /* Cor das barras */
+        transition: 0.3s; /* Transição suave */
+    }
+
+    .menu {
+        flex-direction: column; /* Menu empilhado */
+        width: 100%; /* Para ocupar toda a largura */
+    }
+
+    .menu li {
+        width: 100%; /* Itens do menu ocupam a largura total */
+        text-align: right; /* Alinhar texto à direita */
+        padding: 5px;
+        right: 30px;
+        top: 80px;
+    }
+    
+    .menu li ul {
+        top: -80px;
     }
 
     .confeiteira-img {
-        max-width: 100%; /* A imagem ocupa toda a largura disponível */
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .menu li {
+        margin: 5px 0;
     }
 }
