@@ -119,6 +119,10 @@ body {
     flex-direction: column; /* Empilhar os itens do menu */
 }
 
+.menuToggle{
+    display: none;
+}
+
 
 footer {
     background: #a95534;
