@@ -25,6 +25,12 @@ body {
     position: relative;
 }
 
+.header {
+    flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
+    align-items: center; /* Centraliza os itens */
+}
+
+
 .logotipo img {
     max-width: 60%;
     margin-top: -20px;
@@ -119,10 +125,15 @@ body {
     flex-direction: column; /* Empilhar os itens do menu */
 }
 
-.menuToggle{
-    display: none;
+.menuToggle {
+    display: none; /* Oculta o botão por padrão */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Ajuste conforme necessário */
+    height: 25px; /* Ajuste conforme necessário */
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    margin-top: 10px; /* Espaço entre o logo e o toggle */
 }
-
 
 footer {
     background: #a95534;
@@ -140,7 +151,6 @@ footer {
         max-width: 100%;
         height: auto;
     }
-
     
     .menuNav {
         display: none; /* O menu permanece oculto em dispositivos móveis */
@@ -150,19 +160,13 @@ footer {
     .menuNav.active {
         display: flex; /* Mostrar o menu quando ativo */
         flex-direction: column; /* Empilhar os itens do menu */
+        align-items: center;
     }
 
     .menuToggle {
         display: flex; /* Exibir o botão de menu hambúrguer */
         cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-    }
-
-    .menuToggle {
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px; /* Ajuste conforme necessário */
-        height: 25px; /* Ajuste conforme necessário */
-        margin-right: 20px; /* Ajuste conforme necessário */
+        margin-left: 270px;
     }
 
     .bar {
@@ -179,14 +183,14 @@ footer {
 
     .menu li {
         width: 100%; /* Itens do menu ocupam a largura total */
-        text-align: right; /* Alinhar texto à direita */
-        padding: 5px;
-        right: 30px;
-        top: 80px;
+        text-align: left; /* Alinhar texto à direita */
+        padding: 10px 20px; /* Adiciona um padding ao item */
+        right: 70px;
+        top: 90px;
     }
     
     .menu li ul {
-        top: -80px;
+        top: -75px;
     }
 
     .fundoMenu {

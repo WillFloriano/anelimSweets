@@ -3,16 +3,6 @@
     margin: 0;
     padding: 0;
 }
-/* body {
-    position: relative;
-    font-family: 'Bellota', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('../images/abelhas.png');
-    background-size: cover;
-    background-position: center;
-} */
 
 body {
     font-family: "Bellota", sans-serif;
@@ -47,7 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px;    
 }
 
 .logotipo img {
@@ -154,13 +144,28 @@ footer {
     flex-direction: column; /* Empilhar os itens do menu */
 }
 
-
 .anelim {
     margin-top: 10px;
 }
 
+.menuToggle {
+    display: none; /* Oculta o botão por padrão */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Ajuste conforme necessário */
+    height: 25px; /* Ajuste conforme necessário */
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    margin-top: 10px; /* Espaço entre o logo e o toggle */
+}
+
 @media (max-width: 768px) {
     
+    .header {
+        flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
+        align-items: center; /* Centraliza os itens */
+        position: relative;
+    }   
+
     .logotipo img {
         max-width: 100%;
         height: auto;
@@ -181,16 +186,13 @@ footer {
     .menuNav.active {
         display: flex; /* Mostrar o menu quando ativo */
         flex-direction: column; /* Empilhar os itens do menu */
+        align-items: center;
     }
 
     .menuToggle {
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px; /* Ajuste conforme necessário */
-        height: 25px; /* Ajuste conforme necessário */
-        margin-right: 20px; /* Ajuste conforme necessário */
         display: flex; /* Exibir o botão de menu hambúrguer */
         cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+        margin-left: 270px;
     }
 
     .bar {
@@ -207,14 +209,15 @@ footer {
 
     .menu li {
         width: 100%; /* Itens do menu ocupam a largura total */
-        text-align: right; /* Alinhar texto à direita */
-        padding: 5px;
-        right: 30px;
-        top: 80px;
+        text-align: left; /* Alinhar texto à direita */
+        padding: 10px 20px; /* Adiciona um padding ao item */
+        right: 0px;
+        top: 50px;
     }
     
     .menu li ul {
-        top: -80px;
+        top: -75px;
+        margin-left: -89px;
     }
 
     .confeiteira-img {
