@@ -7,7 +7,7 @@
 body {
     font-family: "Bellota", sans-serif;
     background: #F8F0E3;
-    background-image: url(../images/abelhas.png);
+    background-image: url(../images/fundoabelhas.png);
     background-blend-mode: color-burn;
     color: black;
     display: flex;
@@ -218,6 +218,7 @@ footer {
     .menu li ul {
         top: -75px;
         margin-left: -89px;
+        list-style: none;
     }
 
     .confeiteira-img {
