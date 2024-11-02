@@ -85,9 +85,10 @@ body {
 
 .menu li ul {
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 0;
     display: none;
+    list-style: none;
 }
 
 .menu li:hover ul {
@@ -136,12 +137,15 @@ body {
 }
 
 footer {
-    background: #a95534;
+    background-color: #a95534; /* Mude para a cor do seu logo */
+    padding: 10px 20px;
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 800;
-    color: white;
+}
+
+.footerContato {
+    display: inline;
+    float: right;
+    
 }
 
 /* Media Queries */
@@ -166,7 +170,7 @@ footer {
     .menuToggle {
         display: flex; /* Exibir o botão de menu hambúrguer */
         cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-        margin-left: 270px;
+        margin-left: 330px;
     }
 
     .bar {
@@ -185,12 +189,14 @@ footer {
         width: 100%; /* Itens do menu ocupam a largura total */
         text-align: left; /* Alinhar texto à direita */
         padding: 10px 20px; /* Adiciona um padding ao item */
-        right: 70px;
+        right: 10px;
         top: 90px;
     }
     
-    .menu li ul {
-        top: -75px;
+    .menu li ul li {
+        top: -30px;
+        right: 50px;
+        list-style: none;
     }
 
     .fundoMenu {

@@ -86,6 +86,7 @@ body {
     padding: 5px 10px;
     font-size: 20px;
     font-weight: 900;
+    
 }
 
 .menu li a:hover {
@@ -158,6 +159,12 @@ footer {
     margin-top: 10px; /* Espaço entre o logo e o toggle */
 }
 
+.footerContato {
+    display: inline;
+    float: right;
+    
+}
+
 @media (max-width: 768px) {
     
     .header {
@@ -192,7 +199,7 @@ footer {
     .menuToggle {
         display: flex; /* Exibir o botão de menu hambúrguer */
         cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-        margin-left: 270px;
+        margin-left: 260px;
     }
 
     .bar {
@@ -215,7 +222,7 @@ footer {
         top: 50px;
     }
     
-    .menu li ul {
+    .menu li ul li {
         top: -75px;
         margin-left: -89px;
         list-style: none;
@@ -236,5 +243,13 @@ footer {
 
     .menu li {
         margin: 5px 0;
+        left:25px
+    }
+
+    .menu li ul {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        display: none;
     }
 }
