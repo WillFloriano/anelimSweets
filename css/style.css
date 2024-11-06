@@ -261,6 +261,10 @@ footer {
         height: auto;
         margin-top: 20px;
     }
+    
+    .contentC section {        
+        display: block; /* Permite alinhar o texto e a imagem */
+    }
 }
 
 @media (max-width: 480px) {
