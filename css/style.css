@@ -1,7 +1,9 @@
+/* Estilos gerais */
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,60 +17,56 @@ body {
     min-height: 100vh;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* Ajuste a cor e opacidade conforme necessário */
-    z-index: 1; /* Coloca o overlay acima da imagem */
-}
-
-/* Restante do seu CSS */
-
-
-.container {
-    flex: 1;
-    padding: 20px; /* Adiciona um espaço ao redor do conteúdo */
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;    
+    padding: 20px;
+    position: relative;
+}
+
+.header {
+    flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
+    align-items: center; /* Centraliza os itens */
+}
+
+.logotipo {
+    cursor: pointer;
+}
+
+.logotipo a{
+    cursor: pointer;
 }
 
 .logotipo img {
-    max-width: 60%; /* Aumentar proporção do logo */
-    margin-top: -40px;
+    max-width: 60%;
+    margin-top: -20px;
+    cursor: pointer;    
 }
 
 .menuNav {
     display: flex;
-    justify-content: flex-end; /* Alinhar à direita */
-    position: absolute; /* Permite sobreposição */
-    top: 20px; /* Ajuste a posição vertical conforme necessário */
-    right: 88px; /* Alinhar à direita */
-    flex-wrap: wrap; /* Permitir que os itens do menu se empilhem em telas pequenas */
-    z-index: 10; /* Manter o menu acima do fundo */
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    flex-wrap: wrap;
+    z-index: 10;
 }
 
 .fundoMenu {
-    position: absolute; /* Para permitir sobreposição */
-    top: 0; /* Ajuste a posição vertical conforme necessário */
-    right: 0; /* Alinhar à direita */
+    position: absolute;
+    top: 0;
+    right: 0;
     left: 0;
     width: 100%;
     justify-content: right;
     display: flex;
-    z-index: 5; /* Fundo atrás do menu */
+    z-index: 5;
 }
 
-
 .fundoMenu img {
-    max-width: 30%; /* Ajuste para o tamanho desejado */
+    max-width: 30%;
 }
 
 .menu {
@@ -86,7 +84,6 @@ body {
     padding: 5px 10px;
     font-size: 20px;
     font-weight: 900;
-    
 }
 
 .menu li a:hover {
@@ -96,9 +93,10 @@ body {
 
 .menu li ul {
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 0;
     display: none;
+    list-style: none;
 }
 
 .menu li:hover ul {
@@ -106,25 +104,51 @@ body {
 }
 
 .content {
+    flex: 1;
+    margin: 20px;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.contentC {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.content section {
+.contentC section {
     
     display: flex; /* Permite alinhar o texto e a imagem */
     align-items: flex-start; /* Alinha o texto ao topo da imagem */
 }
 
-.content p {
+.contentC p {
     flex: 1; /* O texto ocupa o espaço restante */
     margin-right: 20px; /* Espaço entre o texto e a imagem */
     text-align: justify; /* Justifica o texto */
     font-size: 1.2em; /* Tamanho da fonte ajustado */
     line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
     font-weight: bolder;
+}
+
+.imagesIni {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.imagesIni img {
+    width: calc(20% - 10px);
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 5px #a95534;
+    transition: transform 0.2s;
+}
+
+.imagesIni img:hover {
+    transform: scale(1.05);
 }
 
 .confeiteira-img {
@@ -134,19 +158,10 @@ body {
     border-radius: 15px;
 }
 
-footer {
-    background-color: #a95534; /* Mude para a cor do seu logo */
-    padding: 10px 20px;
-    text-align: center;
-}
 
 .menuNav.active {
     display: flex; /* Mostrar o menu quando ativo */
     flex-direction: column; /* Empilhar os itens do menu */
-}
-
-.anelim {
-    margin-top: 10px;
 }
 
 .menuToggle {
@@ -159,35 +174,29 @@ footer {
     margin-top: 10px; /* Espaço entre o logo e o toggle */
 }
 
+footer {
+    background-color: #a95534; /* Mude para a cor do seu logo */
+    padding: 10px 20px;
+    text-align: center;
+}
+
 .footerContato {
     display: inline;
     float: right;
     
 }
 
-@media (max-width: 768px) {
-    
-    .header {
-        flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
-        align-items: center; /* Centraliza os itens */
-        position: relative;
-    }   
+/* Media Queries */
 
+@media (max-width: 768px) {
     .logotipo img {
         max-width: 100%;
         height: auto;
     }
-
-    .content section {
-        display: block;
-    }
     
-    .fundoMenu {
-        display: none; /* Oculta o fundoMenu em dispositivos móveis */
-    }
-
     .menuNav {
-        display: none; /* Oculta o menu em telas menores */
+        display: none; /* O menu permanece oculto em dispositivos móveis */
+        /* Estilos para o menu já definidos anteriormente */
     }
 
     .menuNav.active {
@@ -199,7 +208,15 @@ footer {
     .menuToggle {
         display: flex; /* Exibir o botão de menu hambúrguer */
         cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-        margin-left: 260px;
+    }
+
+    #fToggle{
+        width: 100%;
+        background-color: #a95534;
+        justify-content: center;
+        display: flex;
+        height: 40px;
+        border-radius: 10px;
     }
 
     .bar {
@@ -217,15 +234,26 @@ footer {
     .menu li {
         width: 100%; /* Itens do menu ocupam a largura total */
         text-align: left; /* Alinhar texto à direita */
-        padding: 10px 20px; /* Adiciona um padding ao item */
-        right: 0px;
-        top: 50px;
+        padding: 10px 70px; /* Adiciona um padding ao item */
+        top: 155px;
     }
     
     .menu li ul li {
-        top: -75px;
-        margin-left: -89px;
+        top: -45px;
+        right: -95px;
         list-style: none;
+    }
+
+    .fundoMenu {
+       display: none;
+    }
+
+    .fundoMenu img {
+        max-width: 30%;
+    }
+
+    .imagesIni img {
+        width: calc(50% - 20px); /* Duas imagens por linha em telas menores */
     }
 
     .confeiteira-img {
@@ -236,20 +264,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .imagesIni img {
+        width: calc(100% - 20px); /* Uma imagem por linha em telas muito pequenas */
+    }
+
     .content {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    .menu li {
-        margin: 5px 0;
-        left:25px
-    }
-
-    .menu li ul {
-        position: absolute;
-        top: 25px;
-        left: 0;
-        display: none;
+        font-size: 20px; /* Reduzir o tamanho da fonte em telas pequenas */
     }
 }
