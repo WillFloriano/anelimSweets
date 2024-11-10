@@ -186,6 +186,30 @@ footer {
     
 }
 
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a95534;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+}
+#cookie-banner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#cookie-banner button:hover {
+    background-color: #45a049;
+}
+
 /* Media Queries */
 
 @media (max-width: 768px) {
