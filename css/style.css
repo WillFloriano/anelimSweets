@@ -25,22 +25,7 @@ body {
     position: relative;
 }
 
-.header {
-    flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
-    align-items: center; /* Centraliza os itens */
-}
-
 .logotipo {
-    cursor: pointer;
-}
-
-.logotipo a{
-    cursor: pointer;
-}
-
-.logotipo img {
-    max-width: 60%;
-    margin-top: -20px;
     cursor: pointer;    
 }
 
@@ -212,7 +197,12 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (min-width: 200px) and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Mudar para coluna para empilhar logo e menu toggle */
+        align-items: center; /* Centraliza os itens */
+    }
+    
     .logotipo img {
         max-width: 100%;
         height: auto;
@@ -259,13 +249,14 @@ footer {
         width: 100%; /* Itens do menu ocupam a largura total */
         text-align: left; /* Alinhar texto à direita */
         padding: 10px 70px; /* Adiciona um padding ao item */
-        top: 155px;
+        top: 180px;
     }
     
     .menu li ul li {
-        top: -45px;
-        right: -95px;
+        top: -55px;
+        right: -100px;
         list-style: none;
+        display: inline-flex;
     }
 
     .fundoMenu {
